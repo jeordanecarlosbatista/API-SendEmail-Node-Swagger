@@ -1,0 +1,55 @@
+swagger: '2.0'
+info:
+  description: ''
+  version: 1.0.0
+  title: Tarefa para envio de emails
+  contact:
+    email: jeordane.batista@hotmail.com
+host: 'localhost:4000'
+basePath: /api/v1
+tags:
+  - name: Relatorios
+    description: API Relatórios
+schemes:
+  - http
+paths:
+  # ############################################################################
+  # API Relatorios
+  # ############################################################################
+  /relatorios:
+    post:
+      tags:
+        - Relatorios
+      summary: Adiciona nova categoria
+      description: ''
+      operationId: sendEmail
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Objeto de email
+          required: true
+          schema:
+            $ref: '#/definitions/bodyPostEmail'
+      responses:
+        200:
+          description: "Email enviado com sucesso"
+        405:
+          description: "Entrada inválida"
+      x-swagger-router-controller: relatorio.controller
+
+definitions:
+  bodyPostEmail:
+    type: object
+    properties:
+      destinatario: 
+        type: string
+      mensagem: 
+        type: string
+        
+      
+        
+
