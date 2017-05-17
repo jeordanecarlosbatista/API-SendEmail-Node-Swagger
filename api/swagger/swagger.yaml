@@ -8,19 +8,19 @@ info:
 host: 'localhost:4000'
 basePath: /api/v1
 tags:
-  - name: Relatorios
+  - name: Email
     description: API Relatórios
 schemes:
   - http
 paths:
   # ############################################################################
-  # API Relatorios
+  # API Email
   # ############################################################################
-  /relatorios:
+  /email:
     post:
       tags:
-        - Relatorios
-      summary: Adiciona nova categoria
+        - Email
+      summary: Envia e-mail
       description: ''
       operationId: sendEmail
       consumes:
@@ -39,7 +39,7 @@ paths:
           description: "Email enviado com sucesso"
         405:
           description: "Entrada inválida"
-      x-swagger-router-controller: relatorio.controller
+      x-swagger-router-controller: email.controller
 
 definitions:
   bodyPostEmail:
