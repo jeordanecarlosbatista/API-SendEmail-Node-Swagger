@@ -3,7 +3,7 @@ Simple example of how to send email with nodejs
 
 # Installation
 1. git clone https://github.com/jeordanecarlosbatista/API-SendEmail-Node-Swagger.git
-2. cd Envio-de-e-mail-com-Node.js 
+2. cd API-SendEmail-Node-Swagger
 2. npm install
 
 # Test
