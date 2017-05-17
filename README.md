@@ -7,5 +7,5 @@ Simple example of how to send email with nodejs
 2. npm install
 
 # Test
-1. Edit the SMTP settings in the "./infrastructure/email.js" file
+1. Edit the SMTP, Remente, Assunto, etc. settings in the "./infrastructure/email.js" file
 2. API for sending mail is "host _server/api/v1/email'. Method POST. Body {"destinatario": "", "mensagem": "teste"}.
